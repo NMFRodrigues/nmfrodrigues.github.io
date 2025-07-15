@@ -27,7 +27,8 @@ body.home {
   transition: width 0.3s ease;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  justify-content: flex-end;
+  padding-top: 50px;
   z-index: 1000;
 }
 
