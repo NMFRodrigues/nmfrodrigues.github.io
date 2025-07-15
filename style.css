@@ -15,7 +15,7 @@ body {
   cursor: pointer;
   display: block;
   padding: 12px 20px;
-  color: white;
+  color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 
