@@ -21,7 +21,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent background for text */
+  background: rgb(0, 0, 0); /* semi-transparent background for text */
   border-radius: 10px;
   margin-top: 10vh;
   text-align: center;
