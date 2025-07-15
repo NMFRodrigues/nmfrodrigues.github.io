@@ -26,12 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const text = link.getAttribute('data-text') || '';
       contentDiv.innerHTML = `<h1>${title}</h1><p>${text}</p>`;
 
+      // Update active link
       links.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     });
   });
 
-  // Load homepage by default
+  // Trigger default (Home)
   if (links.length > 0) {
     links[0].click();
   }

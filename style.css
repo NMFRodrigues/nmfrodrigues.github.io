@@ -1,56 +1,66 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-  background-color: white;        /* default background */
+  height: 100%;
+}
+
+body {
+  background-image: url("assets/images/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 0.5s ease-in-out;
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
 
 #sidebar a {
-  cursor: pointer;
-  display: block;
-  padding: 12px 20px;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
   text-decoration: none;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#sidebar a:hover {
+#sidebar a:hover, #sidebar a.active {
   background-color: #444;
 }
 
 .content {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 60vw;
   max-width: 800px;
-  background: rgba(0,0,0,0.7);
-  padding: 2rem 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
   border-radius: 10px;
   color: white;
   box-sizing: border-box;
 }
 
-/* Home layout — top right */
+/* Top right layout for homepage */
 .home-layout {
   top: 10vh;
   right: 5vw;
 }
 
-/* Centered layout — other pages */
+/* Centered layout for other pages */
 .centered {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#sidebar a.active {
-  background-color: #666;
-  font-weight: bold;
+/* Add margin so content doesn’t go under sidebar */
+body:not(.home) .content {
+  margin-left: 200px;
 }
-
