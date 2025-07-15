@@ -43,7 +43,7 @@ html, body {
   margin-top: 10vh;
   margin-left: 200px; /* leave room for sidebar */
   padding: 2rem 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   text-align: center;
 }
