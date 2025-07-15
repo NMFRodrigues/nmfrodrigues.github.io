@@ -14,15 +14,43 @@ body {
   color: white;                 /* Optional: text color for readability */
 }
 
-/* Optional content styling */
 .content {
   position: relative;
   z-index: 1;
   max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: rgb(0, 0, 0); /* semi-transparent background for text */
-  border-radius: 10px;
   margin-top: 10vh;
+  margin-left: 200px;       /* push content right to avoid sidebar */
+  padding: 2rem 20px;       /* combined padding */
+  background: rgba(0, 0, 0, 0.5); /* keep your black background */
+  border-radius: 10px;
   text-align: center;
+  color: white;
+}
+
+
+/* Sidebar styles */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;           /* adjust width as you want */
+  height: 100vh;          /* full viewport height */
+  background-color: #222; /* dark background */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Style links inside sidebar */
+#sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#sidebar a:hover {
+  background-color: #444;
 }
