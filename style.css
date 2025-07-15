@@ -36,19 +36,17 @@ body {
   box-sizing: border-box;
 }
 
-.content.centered {
-  position: fixed;
+/* Home layout — top right */
+.home-layout {
+  top: 10vh;
+  right: 5vw;
+}
+
+/* Centered layout — other pages */
+.centered {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60vw;
-  max-width: 800px;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem 20px;
-  border-radius: 10px;
-  color: white;
-  box-sizing: border-box;
-  text-align: center;
 }
 
 #sidebar a.active {

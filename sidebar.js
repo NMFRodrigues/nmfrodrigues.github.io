@@ -7,14 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const bg = link.getAttribute('data-bg');
+
       if (bg) {
+        // Homepage
         document.body.style.backgroundImage = bg;
         document.body.style.backgroundColor = '';
-        contentDiv.classList.remove('centered');  // homepage = no centering
+        contentDiv.classList.remove('centered');
+        contentDiv.classList.add('home-layout');
       } else {
+        // Other pages
         document.body.style.backgroundImage = 'none';
         document.body.style.backgroundColor = 'white';
-        contentDiv.classList.add('centered');     // other pages = center content
+        contentDiv.classList.remove('home-layout');
+        contentDiv.classList.add('centered');
       }
 
       const title = link.getAttribute('data-title') || '';
@@ -26,9 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Optional: trigger first link on load
+  // Load homepage by default
   if (links.length > 0) {
     links[0].click();
   }
 });
+
 
