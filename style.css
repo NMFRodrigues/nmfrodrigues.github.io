@@ -1,18 +1,21 @@
+/* Reset & Layout */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: Arial, sans-serif;
 }
 
-body {
-  background-image: url("assets/images/background.png");
+/* Backgrounds */
+body.home {
+  background-image: url("assets/images/background-home.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
   color: white;
 }
 
+/* Sidebar */
 #sidebar {
   position: fixed;
   top: 0;
@@ -37,30 +40,47 @@ body {
   background-color: #444;
 }
 
+/* Content box */
 .content {
-  position: fixed;
   max-width: 800px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent for homepage */
   padding: 2rem;
   border-radius: 10px;
-  color: white;
   box-sizing: border-box;
 }
 
-/* Top right layout for homepage */
-.home-layout {
+body.home .content {
+  position: fixed;
   top: 10vh;
   right: 5vw;
 }
 
-/* Centered layout for other pages */
-.centered {
+body.plain .content {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: white;
+  color: black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Add margin so content doesn’t go under sidebar */
-body:not(.home) .content {
-  margin-left: 200px;
+body.about {
+  background-color: white;
+  background-image: none;
+  color: black;
 }
+
+body.research {
+  background-color: white;
+  background-image: none;
+  color: black;
+}
+
+body.home {
+  background-image: url('assets/images/background.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
