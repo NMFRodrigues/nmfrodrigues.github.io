@@ -10,9 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (bg) {
         document.body.style.backgroundImage = bg;
         document.body.style.backgroundColor = '';
+        contentDiv.classList.remove('centered');  // homepage = no centering
       } else {
         document.body.style.backgroundImage = 'none';
         document.body.style.backgroundColor = 'white';
+        contentDiv.classList.add('centered');     // other pages = center content
       }
 
       const title = link.getAttribute('data-title') || '';
@@ -23,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add('active');
     });
   });
-});
 
-// Initialize first link as active on page load
-if (links.length > 0) {
-  links[0].click();
-}
+  // Optional: trigger first link on load
+  if (links.length > 0) {
+    links[0].click();
+  }
+});
 
