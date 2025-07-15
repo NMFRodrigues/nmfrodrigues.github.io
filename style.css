@@ -17,12 +17,19 @@ body.home {
 
 /* Sidebar collapsed initially */
 #sidebar {
+  position: fixed;
+  top: 250px; /* Adjusted to start below the header */
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #222;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;  /* pushes links to bottom */
-  padding-top: 50px;          /* space from top */
-  width: 200px;               /* default open width */
-  /* other styles */
+  justify-content: flex-end;
+  padding-top: 50px;
+  z-index: 1000;
 }
 
 #sidebar.open {
