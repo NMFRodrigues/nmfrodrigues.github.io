@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: Arial, serif;
   color: white;
   background-image: url("assets/images/background.png");
   background-size: cover;
@@ -14,7 +14,7 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 400px;
   height: 100vh;
   background-color: #222;
   padding-top: 20px;
