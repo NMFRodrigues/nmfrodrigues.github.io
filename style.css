@@ -19,13 +19,14 @@ body {
   z-index: 1;
   max-width: 800px;
   margin-top: 10vh;
-  margin-left: 200px;       /* push content right to avoid sidebar */
-  padding: 2rem 20px;       /* combined padding */
-  background: rgba(0, 0, 0, 0.5); /* keep your black background */
+  margin-left: 200px;       /* space for sidebar */
+  padding: 2rem 20px;
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent */
   border-radius: 10px;
   text-align: center;
   color: white;
 }
+
 
 
 /* Sidebar styles */
