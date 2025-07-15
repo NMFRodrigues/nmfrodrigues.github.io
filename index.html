@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="home">
 <head>
   <meta charset="UTF-8" />
-  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - Nuno Rodrigues</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="plain">
+<body class="home">
+  <div id="sidebar">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="research.html">Research</a>
+  </div>
 
-    <nav id="sidebar">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-    </nav>
+  <button id="openSidebarBtn">☰ Open Sidebar</button>
+  <button id="closeSidebarBtn" style="display:none;">× Close Sidebar</button>
 
-    <div class="content">
-        <h1>Nuno Rodrigues</h1>
-        <p>Welcome to the homepage!</p>
-    </div>
-    <script src="sidebar.js"></script>
+  <div class="content">
+    <h1>Welcome to my homepage</h1>
+    <p>This is the homepage with a cool background image.</p>
+  </div>
+
+  <script src="sidebar.js"></script>
 </body>
 </html>

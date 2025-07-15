@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="research">
 <head>
   <meta charset="UTF-8" />
-  <title>Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research - Nuno Rodrigues</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="plain">
-
-  <nav id="sidebar">
+<body class="research">
+  <div id="sidebar" class="open">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="research.html" class="active">Research</a>
-  </nav>
-
-  <div class="content centered">
-    <h1>Ongoing Research</h1>
-    <p>Modes of Orogenic Growth: 2D Modelling</p>
-    <p>Dynamics of Continental Collision 3D Modelling</p>
-    <p><a href="../">← Back to Home</a></p>
   </div>
+
+  <button id="openSidebarBtn" style="display:none;">☰ Open Sidebar</button>
+  <button id="closeSidebarBtn">× Close Sidebar</button>
+
+  <div class="content">
+    <h1>My Research</h1>
+    <p>This page has a white background and centered content.</p>
+  </div>
+
   <script src="sidebar.js"></script>
 </body>
 </html>
