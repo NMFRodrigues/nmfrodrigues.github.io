@@ -6,22 +6,36 @@
   min-height: 100vh;
 } */
 
+/* Make body fill the screen */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Background video fills screen */
 #bg-video {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
+  z-index: -1;
 }
 
-/* Content sits on top of video */
+/* Content appears on top */
 .content {
   position: relative;
   z-index: 1;
   color: white;
   text-align: center;
-  padding-top: 10vh;
-  font-family: Arial, sans-serif;
+  padding-top: 20vh;
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.4); /* optional translucent overlay */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
 }
