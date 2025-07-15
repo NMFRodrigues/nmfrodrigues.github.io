@@ -12,7 +12,7 @@ body.home {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: white; /* optional, so text is visible */
 }
 
 /* Sidebar collapsed initially */
