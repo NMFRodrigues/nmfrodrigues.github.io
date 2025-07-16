@@ -26,8 +26,6 @@ body.home {
   overflow-x: hidden;
   transition: width 0.3s ease;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   padding-top: 50px;
   z-index: 1000;
 }
