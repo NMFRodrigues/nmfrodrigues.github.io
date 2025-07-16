@@ -18,7 +18,7 @@ body.home {
 /* Sidebar collapsed initially */
 #sidebar {
   position: fixed;
-  top: 250px; /* Adjusted to start below the header */
+  top: 0; /* Adjusted to start below the header */
   left: 0;
   width: 0;
   height: 100vh;
@@ -46,6 +46,10 @@ body.home {
 
 #sidebar a:hover, #sidebar a.active {
   background-color: #444;
+}
+
+#sidebar a:first-child {
+  margin-top: 100px; /* adjust the value as needed */
 }
 
 /* Content box */
