@@ -1,0 +1,114 @@
+/* Reset & Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background for home */
+body.home {
+  background-image: url("assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* optional, so text is visible */
+}
+
+/* Sidebar collapsed initially */
+#sidebar {
+  position: fixed;
+  top: 0; /* Adjusted to start below the header */
+  left: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #222;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  z-index: 1000;
+}
+
+#sidebar.open {
+  width: 200px;
+}
+
+#sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#sidebar a:hover, #sidebar a.active {
+  background-color: #444;
+}
+
+#sidebar a:first-child {
+  margin-top: 50px; /* adjust the value as needed */
+}
+
+/* Content box */
+.content {
+  max-width: 800px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+  color: black;
+  background: white;
+}
+
+/* Home page content */
+body.home .content {
+  position: fixed;
+  top: 10vh;
+  right: 5vw;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-left: 0;
+}
+
+/* Adjust content margin when sidebar is open */
+#sidebar.open ~ .content {
+  margin-left: 200px;
+}
+
+/* Body backgrounds for other pages */
+body.about,
+body.research {
+  background-color: white;
+  background-image: none;
+  color: black;
+}
+
+body.about .content,
+body.research .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-left: 0;
+}
+
+/* Sidebar toggle buttons */
+#openSidebarBtn, #closeSidebarBtn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
